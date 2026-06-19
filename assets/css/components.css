@@ -104,6 +104,40 @@
 .btn--lg { padding: 1.1rem 2rem; font-size: 1.05rem; }
 .btn--block { width: 100%; }
 
+/* ─── TOPBAR ─────────────────────────────────────────────────── */
+.topbar {
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+}
+.topbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 36px;
+}
+.topbar__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+  transition: color 0.15s ease;
+}
+.topbar__item:hover { color: var(--white); }
+.topbar__item svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+.topbar__right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+@media (max-width: 767px) { .topbar { display: none; } }
+
 /* ─── NAVBAR ─────────────────────────────────────────────────── */
 
 .navbar {
