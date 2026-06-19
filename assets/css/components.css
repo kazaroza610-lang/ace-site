@@ -283,7 +283,7 @@ body.menu-open { overflow: hidden; }
     linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 55%, #0a1830 100%);
   color: var(--white);
   overflow: hidden;
-  padding: var(--space-2xl) 0;
+  padding: 3.5rem 0;
 }
 
 /* Motif décoratif subtil */
@@ -971,4 +971,37 @@ body.menu-open { overflow: hidden; }
   color: var(--orange-light);
   font-size: 0.55rem;
   flex-shrink: 0;
+}
+
+/* ── Eco banner Normandie Forever ── */
+.eco-banner {
+  background: #f7f8f4;
+  border-top: 1px solid #dde8c8;
+  border-bottom: 1px solid #dde8c8;
+  padding: 2rem 0;
+}
+.eco-banner__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+.eco-banner__logo svg {
+  display: block;
+}
+.eco-banner__text {
+  font-size: 0.95rem;
+  color: #4a5a30;
+  max-width: 580px;
+  margin: 0;
+  line-height: 1.6;
+}
+@media (min-width: 768px) {
+  .eco-banner__inner {
+    flex-direction: row;
+    text-align: left;
+    gap: 2rem;
+  }
+  .eco-banner__logo { flex-shrink: 0; }
 }
