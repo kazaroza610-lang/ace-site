@@ -189,6 +189,7 @@
   width: 44px;
   height: 44px;
   padding: 10px;
+  flex-shrink: 0;
 }
 .navbar__burger span {
   display: block;
@@ -201,6 +202,19 @@
 
 @media (min-width: 1024px) {
   .navbar__burger { display: none; }
+}
+
+/* Mobile : burger à gauche, logo centré */
+@media (max-width: 1023px) {
+  .navbar__inner {
+    position: relative;
+    justify-content: flex-start;
+  }
+  .navbar__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 /* État ouvert (croix) */
