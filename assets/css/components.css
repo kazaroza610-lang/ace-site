@@ -454,7 +454,26 @@ body.menu-open { overflow: hidden; }
   transform: scale(1.04);
 }
 
-/* Contenu sous l'image */
+/* Icône (cartes sans image — ex: valeurs, expertise) */
+.service-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background: rgba(0, 82, 204, 0.08);
+  border-radius: 12px;
+  margin: 1.6rem 1.6rem 0;
+  flex-shrink: 0;
+}
+.service-card__icon svg {
+  width: 26px;
+  height: 26px;
+  color: var(--orange);
+  stroke: var(--orange);
+}
+
+/* Contenu sous l'image ou sous l'icône */
 .service-card__body {
   padding: 1.5rem 1.6rem;
   display: flex;
