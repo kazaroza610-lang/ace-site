@@ -105,44 +105,6 @@
 .btn--block { width: 100%; }
 
 /* ─── NAVBAR ─────────────────────────────────────────────────── */
-/* ─── TOPBAR ──────────────────────────────────────────────────── */
-.topbar {
-  background: var(--navy);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  display: none;
-}
-@media (min-width: 768px) {
-  .topbar { display: block; }
-}
-.topbar__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 38px;
-  gap: 1rem;
-}
-.topbar__right {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-.topbar__item {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.7);
-  white-space: nowrap;
-  transition: color 0.15s ease;
-  text-decoration: none;
-}
-.topbar__item svg {
-  width: 13px;
-  height: 13px;
-  flex-shrink: 0;
-  color: var(--orange-light);
-}
-a.topbar__item:hover { color: var(--white); }
 
 .navbar {
   position: sticky;
@@ -419,7 +381,6 @@ body.menu-open { overflow: hidden; }
   background: var(--white);
   border: 1px solid rgba(13, 31, 60, 0.07);
   border-radius: var(--radius-md);
-  padding: 2rem 1.75rem;
   overflow: hidden;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   display: flex;
@@ -447,24 +408,45 @@ body.menu-open { overflow: hidden; }
 }
 .service-card:hover::after { width: 100%; }
 
+/* Image en haut de la carte */
+.service-card__img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.service-card:hover .service-card__img {
+  transform: scale(1.04);
+}
+
+/* Contenu sous l'image */
+.service-card__body {
+  padding: 1.5rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 .service-card__icon {
-  width: 54px;
-  height: 54px;
+  width: 46px;
+  height: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(0, 82, 204, 0.10);
   border-radius: var(--radius-md);
-  margin-bottom: 1.3rem;
+  margin-bottom: 1rem;
 }
-.service-card__icon svg { width: 28px; height: 28px; color: var(--orange); }
+.service-card__icon svg { width: 24px; height: 24px; color: var(--orange); }
 
 .service-card h3 {
   color: var(--navy);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
 }
 .service-card p {
-  font-size: 0.96rem;
+  font-size: 0.93rem;
   flex: 1;
   color: var(--slate);
 }
