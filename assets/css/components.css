@@ -764,7 +764,7 @@ body.menu-open { overflow: hidden; }
     radial-gradient(ellipse 70% 80% at 80% 0%, rgba(26, 58, 107, 0.5), transparent 65%),
     linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 100%);
   color: var(--white);
-  padding: var(--space-xl) 0;
+  padding: 2rem 0 2.5rem;
   text-align: center;
 }
 .page-hero h1 { color: var(--white); margin-bottom: 1rem; }
