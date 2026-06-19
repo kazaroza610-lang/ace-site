@@ -581,6 +581,7 @@ body.menu-open { overflow: hidden; }
   background: linear-gradient(120deg, var(--orange) 0%, var(--orange-light) 100%);
   color: var(--white);
   text-align: center;
+  padding: 2.5rem 0;
 }
 .cta-band h2 { color: var(--white); margin-bottom: 0.8rem; }
 .cta-band__sub {
@@ -1037,7 +1038,7 @@ body.menu-open { overflow: hidden; }
   background: #f7f8f4;
   border-top: 1px solid #dde8c8;
   border-bottom: 1px solid #dde8c8;
-  padding: 2.5rem 0;
+  padding: 1.5rem 0;
 }
 .eco-banner__inner {
   display: flex;
