@@ -902,3 +902,47 @@ body.menu-open { overflow: hidden; }
   color: var(--slate);
   text-align: center;
 }
+
+/* ─── TICKER DÉFILANT ──────────────────────────────────────────── */
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker {
+  background: var(--navy);
+  overflow: hidden;
+  padding: 0.85rem 0;
+  border-top: 3px solid var(--orange);
+  border-bottom: 3px solid var(--orange);
+}
+
+.ticker__track {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll 28s linear infinite;
+}
+
+.ticker__track:hover {
+  animation-play-state: paused;
+}
+
+.ticker__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 2.5rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--white);
+  white-space: nowrap;
+}
+
+.ticker__dot {
+  color: var(--orange-light);
+  font-size: 0.55rem;
+  flex-shrink: 0;
+}
