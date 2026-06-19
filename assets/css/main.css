@@ -1,0 +1,252 @@
+/* ============================================================
+   AIR COMPRIMÉ NORMANDIE — main.css
+   Design System : Variables · Reset · Typo · Layout · Utils
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500;600&display=swap');
+
+/* ─── DESIGN TOKENS ────────────────────────────────────────── */
+:root {
+  /* Couleurs — palette ACN bleu #0052CC + blanc */
+  --navy:         #0A1F44;   /* fond sombre (bleu nuit) */
+  --navy-mid:     #103163;   /* variante */
+  --blue:         #1A478A;   /* bleu industriel intermédiaire */
+  /* Accents : --orange = bleu primaire de marque, --orange-light = bleu clair (sur fonds sombres) */
+  --orange:       #0052CC;   /* bleu ACN — CTA, icônes, accents sur fond clair */
+  --orange-light: #3B82F6;   /* bleu clair — accents sur fond sombre, dégradés, hover */
+  --slate:        #4A5568;
+  --silver:       #E8EDF4;
+  --white:        #FFFFFF;
+  --text:         #1A202C;
+  --text-soft:    #718096;
+  --footer-bg:    #080F1E;
+
+  /* Typographie */
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body:    'Inter', sans-serif;
+
+  /* Espacement */
+  --space-xs:  0.5rem;
+  --space-sm:  1rem;
+  --space-md:  1.5rem;
+  --space-lg:  2.5rem;
+  --space-xl:  4rem;
+  --space-2xl: 6rem;
+
+  /* Tokens UI */
+  --radius-sm:   8px;
+  --radius-md:   10px;
+  --radius-pill: 100px;
+  --shadow-sm:   0 4px 24px rgba(13, 31, 60, 0.10);
+  --shadow-lg:   0 12px 48px rgba(13, 31, 60, 0.18);
+  --transition:  all 0.2s ease;
+
+  /* Layout */
+  --container-max: 1200px;
+  --nav-height:    72px;
+}
+
+/* ─── RESET ─────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-bottom: 74px;
+}
+
+@media (min-width: 1024px) {
+  body { padding-bottom: 0; }
+}
+
+img, svg { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul, ol { list-style: none; }
+button { cursor: pointer; font-family: var(--font-body); border: none; background: none; }
+input, textarea, select { font-family: var(--font-body); }
+
+/* ─── TYPOGRAPHIE ───────────────────────────────────────────── */
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+  line-height: 1.08;
+  font-weight: 800;
+  color: inherit;
+}
+
+h1 { font-size: clamp(2.6rem, 5.5vw, 4.2rem); }
+h2 { font-size: clamp(2rem,   4vw,   3.2rem); }
+h3 { font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 700; }
+h4 { font-size: 1.15rem; font-weight: 700; font-family: var(--font-body); }
+
+p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-soft);
+}
+
+/* ─── LAYOUT ─────────────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+@media (min-width: 640px)  { .container { padding: 0 2rem; } }
+@media (min-width: 1024px) { .container { padding: 0 2.5rem; } }
+
+.section {
+  padding: var(--space-xl) 0;
+}
+
+@media (min-width: 1024px) {
+  .section { padding: var(--space-2xl) 0; }
+}
+
+/* ─── GRILLES ────────────────────────────────────────────────── */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ─── UTILITAIRES ────────────────────────────────────────────── */
+.text-white  { color: var(--white) !important; }
+.text-orange { color: var(--orange) !important; }
+.text-navy   { color: var(--navy) !important; }
+.text-soft   { color: var(--text-soft) !important; }
+.text-center { text-align: center; }
+.text-left   { text-align: left; }
+
+.bg-navy   { background: var(--navy); }
+.bg-silver { background: var(--silver); }
+.bg-white  { background: var(--white); }
+
+.flex       { display: flex; }
+.flex-col   { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.gap-sm     { gap: 0.75rem; }
+.gap-md     { gap: 1.5rem; }
+
+.mt-sm { margin-top: 0.75rem; }
+.mt-md { margin-top: 1.5rem; }
+.mt-lg { margin-top: 2.5rem; }
+.mb-sm { margin-bottom: 0.75rem; }
+.mb-md { margin-bottom: 1.5rem; }
+
+/* ─── EYEBROW / PILL ─────────────────────────────────────────── */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--orange);
+  background: rgba(0, 82, 204, 0.10);
+  border: 1px solid rgba(0, 82, 204, 0.28);
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 1rem;
+}
+
+.eyebrow--white {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.10);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+/* Variante claire — pour fonds sombres (bleu vif lisible sur navy) */
+.eyebrow--light {
+  color: var(--orange-light);
+  background: rgba(59, 130, 246, 0.16);
+  border-color: rgba(59, 130, 246, 0.40);
+}
+
+/* ─── SECTION HEADER ─────────────────────────────────────────── */
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: var(--space-lg);
+}
+
+.section-header--center {
+  align-items: center;
+  text-align: center;
+}
+
+.section-header p {
+  max-width: 580px;
+  margin-top: 0.8rem;
+  font-size: 1.05rem;
+}
+
+.section-header--center p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ─── ANIMATIONS (IntersectionObserver) ──────────────────────── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays pour les grilles */
+.stagger > *:nth-child(1) { transition-delay: 0ms; }
+.stagger > *:nth-child(2) { transition-delay: 80ms; }
+.stagger > *:nth-child(3) { transition-delay: 160ms; }
+.stagger > *:nth-child(4) { transition-delay: 240ms; }
+.stagger > *:nth-child(5) { transition-delay: 320ms; }
+.stagger > *:nth-child(6) { transition-delay: 400ms; }
+.stagger > *:nth-child(7) { transition-delay: 480ms; }
+
+/* ─── FOCUS VISIBLE ──────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ─── SCROLLBAR ──────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--silver); }
+::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 10px; }

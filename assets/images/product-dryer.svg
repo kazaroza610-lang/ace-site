@@ -1,0 +1,27 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sécheur d'air comprimé">
+  <defs>
+    <linearGradient id="dg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eef2f8"/>
+      <stop offset="1" stop-color="#d8e0ec"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#dg)"/>
+  <ellipse cx="200" cy="252" rx="120" ry="16" fill="#0D1F3C" opacity="0.10"/>
+  <!-- Corps -->
+  <rect x="140" y="60" width="120" height="180" rx="12" fill="#1A3A6B"/>
+  <rect x="140" y="60" width="120" height="40" rx="12" fill="#162d52"/>
+  <!-- Écran digital -->
+  <rect x="162" y="78" width="76" height="44" rx="6" fill="#0D1F3C"/>
+  <text x="200" y="106" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-weight="800" font-size="22" fill="#52d869">3°C</text>
+  <!-- Symbole goutte (séchage) -->
+  <g transform="translate(200,160)">
+    <path d="M0 -26c14 18 18 26 18 36a18 18 0 1 1 -36 0c0-10 4-18 18-36z" fill="#2563EB"/>
+    <path d="M0 -10c6 8 8 12 8 17a8 8 0 1 1 -16 0c0-5 2-9 8-17z" fill="#60A5FA" opacity="0.6"/>
+  </g>
+  <!-- Pieds -->
+  <rect x="156" y="240" width="16" height="18" rx="3" fill="#4A5568"/>
+  <rect x="228" y="240" width="16" height="18" rx="3" fill="#4A5568"/>
+  <!-- Connexions -->
+  <circle cx="140" cy="140" r="9" fill="#4A5568"/>
+  <circle cx="260" cy="140" r="9" fill="#4A5568"/>
+</svg>

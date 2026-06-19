@@ -1,0 +1,53 @@
+<svg width="520" height="400" viewBox="0 0 520 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Maintenance et entretien de compresseur">
+  <defs>
+    <linearGradient id="mbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E8EDF4"/>
+      <stop offset="1" stop-color="#d4ddea"/>
+    </linearGradient>
+  </defs>
+  <rect width="520" height="400" rx="16" fill="url(#mbg)"/>
+
+  <!-- Compresseur en coupe -->
+  <rect x="120" y="120" width="220" height="180" rx="16" fill="#1A3A6B"/>
+  <rect x="120" y="120" width="220" height="46" rx="16" fill="#162d52"/>
+  <circle cx="230" cy="210" r="55" fill="#0D1F3C"/>
+  <!-- Engrenage central -->
+  <g transform="translate(230,210)">
+    <circle r="40" fill="#4A5568"/>
+    <g fill="#E8EDF4">
+      <rect x="-7" y="-50" width="14" height="16" rx="2"/>
+      <rect x="-7" y="34" width="14" height="16" rx="2"/>
+      <rect x="-50" y="-7" width="16" height="14" rx="2"/>
+      <rect x="34" y="-7" width="16" height="14" rx="2"/>
+    </g>
+    <g fill="#E8EDF4" transform="rotate(45)">
+      <rect x="-7" y="-50" width="14" height="16" rx="2"/>
+      <rect x="-7" y="34" width="14" height="16" rx="2"/>
+      <rect x="-50" y="-7" width="16" height="14" rx="2"/>
+      <rect x="34" y="-7" width="16" height="14" rx="2"/>
+    </g>
+    <circle r="22" fill="#2563EB"/>
+    <circle r="9" fill="#0D1F3C"/>
+  </g>
+
+  <!-- Clé à molette -->
+  <g transform="translate(330,250) rotate(38)">
+    <rect x="-10" y="0" width="20" height="110" rx="8" fill="#2563EB"/>
+    <path d="M-22 -26a26 26 0 1 1 44 0l-12 0a14 14 0 1 0 -20 0z" fill="#1D4ED8"/>
+  </g>
+
+  <!-- Coche de contrôle -->
+  <g transform="translate(380,90)">
+    <circle r="36" fill="#52a868"/>
+    <path d="M-15 2l10 11 20-23" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- Liste de checklist -->
+  <g transform="translate(60,300)">
+    <rect width="180" height="70" rx="10" fill="#ffffff"/>
+    <circle cx="22" cy="22" r="7" fill="#52a868"/>
+    <rect x="40" y="18" width="120" height="8" rx="4" fill="#cdd6e3"/>
+    <circle cx="22" cy="48" r="7" fill="#52a868"/>
+    <rect x="40" y="44" width="100" height="8" rx="4" fill="#cdd6e3"/>
+  </g>
+</svg>
