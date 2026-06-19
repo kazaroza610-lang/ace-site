@@ -428,17 +428,6 @@ body.menu-open { overflow: hidden; }
   flex: 1;
 }
 
-.service-card__icon {
-  width: 46px;
-  height: 46px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 82, 204, 0.10);
-  border-radius: var(--radius-md);
-  margin-bottom: 1rem;
-}
-.service-card__icon svg { width: 24px; height: 24px; color: var(--orange); }
 
 .service-card h3 {
   color: var(--navy);
@@ -492,30 +481,27 @@ body.menu-open { overflow: hidden; }
 .zones__pills {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 0.5rem;
+  gap: 0.6rem;
+  margin-top: 1rem;
 }
 .zone-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.95rem;
-  font-weight: 500;
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
   color: var(--navy);
-  background: var(--silver);
-  border: 1px solid rgba(13, 31, 60, 0.08);
-  padding: 0.6rem 1.2rem;
+  background: transparent;
+  border: 1.5px solid rgba(13, 31, 60, 0.18);
+  padding: 0.45rem 1.1rem;
   border-radius: var(--radius-pill);
+  letter-spacing: 0.01em;
   transition: var(--transition);
 }
-.zone-pill svg { width: 15px; height: 15px; color: var(--orange); transition: color 0.2s ease; }
 .zone-pill:hover {
   background: var(--navy);
   color: var(--white);
   border-color: var(--navy);
   transform: translateY(-2px);
 }
-.zone-pill:hover svg { color: var(--orange-light); }
 
 /* ─── SECTION CTA (fond dégradé orange) ──────────────────────── */
 .cta-band {
@@ -978,7 +964,7 @@ body.menu-open { overflow: hidden; }
   background: #f7f8f4;
   border-top: 1px solid #dde8c8;
   border-bottom: 1px solid #dde8c8;
-  padding: 2rem 0;
+  padding: 2.5rem 0;
 }
 .eco-banner__inner {
   display: flex;
@@ -987,21 +973,11 @@ body.menu-open { overflow: hidden; }
   gap: 1rem;
   text-align: center;
 }
-.eco-banner__logo svg {
-  display: block;
-}
+.eco-banner__logo svg { display: block; }
 .eco-banner__text {
   font-size: 0.95rem;
   color: #4a5a30;
-  max-width: 580px;
-  margin: 0;
-  line-height: 1.6;
-}
-@media (min-width: 768px) {
-  .eco-banner__inner {
-    flex-direction: row;
-    text-align: left;
-    gap: 2rem;
-  }
-  .eco-banner__logo { flex-shrink: 0; }
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.65;
 }
