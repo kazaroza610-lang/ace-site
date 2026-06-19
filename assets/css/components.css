@@ -105,6 +105,45 @@
 .btn--block { width: 100%; }
 
 /* ─── NAVBAR ─────────────────────────────────────────────────── */
+/* ─── TOPBAR ──────────────────────────────────────────────────── */
+.topbar {
+  background: var(--navy);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: none;
+}
+@media (min-width: 768px) {
+  .topbar { display: block; }
+}
+.topbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 38px;
+  gap: 1rem;
+}
+.topbar__right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.topbar__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+  transition: color 0.15s ease;
+  text-decoration: none;
+}
+.topbar__item svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  color: var(--orange-light);
+}
+a.topbar__item:hover { color: var(--white); }
+
 .navbar {
   position: sticky;
   top: 0;
