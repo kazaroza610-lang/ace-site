@@ -116,7 +116,7 @@ const footer = `
       </div>
     </div>
   </footer>
-  <script src="/assets/js/main.js?v=20260627a" defer></script>`;
+  <script src="/assets/js/main.js?v=20260627b" defer></script>`;
 
 /* ─── Page hero réutilisable ──────────────────────────────── */
 function pageHero(crumb, title, intro) {
@@ -151,7 +151,7 @@ function doc({ slug, active, title, desc, canonical, ogImg, main }) {
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=20260627a">
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260627b">
 </head>
 <body>
 ${header(active)}
@@ -194,10 +194,22 @@ pages.push({
           <p class="lead">Une maîtrise complète de l'air comprimé et des fluides industriels, de la conception à la maintenance.</p>
         </div>
         <div class="badge-grid">
-          <div class="badge-card reveal"><img src="/assets/img/illus/illus-compresseurs.png" alt="Compresseurs d'air" loading="lazy"></div>
-          <div class="badge-card reveal"><img src="/assets/img/illus/illus-reseaux.png" alt="Réseaux d'air comprimé" loading="lazy"></div>
-          <div class="badge-card reveal"><img src="/assets/img/illus/illus-c.png" alt="Réseaux de fluides industriels" loading="lazy"></div>
-          <div class="badge-card reveal"><img src="/assets/img/illus/illus-d.png" alt="Installation, maintenance et SAV toutes marques" loading="lazy"></div>
+          <div class="badge-card reveal">
+            <div class="badge-card__media"><img src="/assets/img/service-traitement-air.jpg" alt="Compresseurs d'air" loading="lazy"></div>
+            <span>Compresseurs d'air</span>
+          </div>
+          <div class="badge-card reveal">
+            <div class="badge-card__media"><img src="/assets/img/hero-services.jpg" alt="Réseaux d'air comprimé" loading="lazy"></div>
+            <span>Réseaux d'air comprimé</span>
+          </div>
+          <div class="badge-card reveal">
+            <div class="badge-card__media"><img src="/assets/img/service-fluides.jpg" alt="Réseaux de fluides industriels" loading="lazy"></div>
+            <span>Réseaux de fluides industriels</span>
+          </div>
+          <div class="badge-card reveal">
+            <div class="badge-card__media"><img src="/assets/img/service-maintenance.jpg" alt="Installation, maintenance et SAV toutes marques" loading="lazy"></div>
+            <span>Installation, maintenance et SAV toutes marques</span>
+          </div>
         </div>
       </div>
     </section>
