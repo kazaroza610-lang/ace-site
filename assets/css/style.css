@@ -392,6 +392,13 @@ body.menu-open { overflow: hidden; }
 .mt-sm { margin-top: 1rem; } .mt-md { margin-top: 1.5rem; } .mt-lg { margin-top: 2.5rem; }
 .mb-0 { margin-bottom: 0; }
 
+/* Galerie photos uniformes */
+.gallery img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow-sm); }
+
+/* Intégration vidéo (YouTube) responsive 16:9 */
+.video-embed { position: relative; width: 100%; aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg); background: #000; }
+.video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
 /* ════════════════ RESPONSIVE ════════════════ */
 @media (max-width: 992px) {
   .grid--4 { grid-template-columns: repeat(2,1fr); }

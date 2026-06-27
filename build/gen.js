@@ -182,7 +182,7 @@ pages.push({
   file: 'qui-sommes-nous.html', slug: 'qui-sommes-nous', active: 'apropos',
   title: 'Qui sommes-nous ? — Air Comprimé Normandie',
   desc: "Spécialistes des compresseurs d'air et des réseaux de fluides en Normandie et Ille-et-Vilaine. Nos missions, nos valeurs et nos zones d'intervention.",
-  canonical: '/qui-sommes-nous', ogImg: '/assets/img/about-1.jpg',
+  canonical: '/qui-sommes-nous', ogImg: '/assets/img/service-conseil.jpg',
   main: `${pageHero('Qui sommes-nous&nbsp;?', 'Qui sommes-nous&nbsp;?',
     "Spécialistes des compresseurs d'air et des réseaux de fluides, nous intervenons à chaque étape de vos projets.")}
 
@@ -196,15 +196,15 @@ pages.push({
             <p>Nous sommes également distributeur et partenaire de marques de compresseurs, ainsi que de marques d'autres spécialités.</p>
           </div>
           <div class="split__media reveal">
-            <img src="/assets/img/about-2.jpg" alt="Techniciens Air Comprimé Normandie en intervention" loading="lazy" width="1024" height="1024">
+            <img src="/assets/img/service-conseil.jpg" alt="Bureau d'études et conception technique ACN" loading="lazy" width="1024" height="683">
           </div>
         </div>
 
-        <div class="grid grid--4 mt-lg">
-          <div class="reveal"><img src="/assets/img/about-1.jpg" alt="Atelier ACN" loading="lazy" style="border-radius:var(--radius)"></div>
-          <div class="reveal"><img src="/assets/img/about-2.jpg" alt="Intervention sur site" loading="lazy" style="border-radius:var(--radius)"></div>
-          <div class="reveal"><img src="/assets/img/about-3.jpg" alt="Maintenance compresseur" loading="lazy" style="border-radius:var(--radius)"></div>
-          <div class="reveal"><img src="/assets/img/about-4.jpg" alt="Réseau d'air comprimé" loading="lazy" style="border-radius:var(--radius)"></div>
+        <div class="grid grid--4 mt-lg gallery">
+          <div class="reveal"><img src="/assets/img/service-maintenance.jpg" alt="Maintenance de compresseur par un technicien ACN" loading="lazy"></div>
+          <div class="reveal"><img src="/assets/img/service-traitement-air.jpg" alt="Équipements de traitement de l'air comprimé" loading="lazy"></div>
+          <div class="reveal"><img src="/assets/img/service-optimisation.jpg" alt="Optimisation et mesure de pression d'un réseau" loading="lazy"></div>
+          <div class="reveal"><img src="/assets/img/service-fluides.jpg" alt="Réseau de fluides industriels en inox et aluminium" loading="lazy"></div>
         </div>
       </div>
     </section>
@@ -224,7 +224,7 @@ pages.push({
             </ul>
           </div>
           <div class="split__media reveal">
-            <img src="/assets/img/about-3.jpg" alt="Service de maintenance ACN" loading="lazy" width="1024" height="1024">
+            <img src="/assets/img/hero-services.jpg" alt="Installation et mise en service d'un réseau d'air comprimé" loading="lazy" width="1024" height="683">
           </div>
         </div>
       </div>
@@ -263,7 +263,7 @@ pages.push({
             </div>
           </div>
           <div class="split__media reveal">
-            <img src="/assets/img/about-4.jpg" alt="Zone d'intervention ACN en Normandie" loading="lazy" width="1024" height="1024">
+            <img src="/assets/img/service-maintenance.jpg" alt="Technicien itinérant ACN en intervention sur site" loading="lazy" width="1024" height="683">
           </div>
         </div>
       </div>
