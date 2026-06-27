@@ -184,27 +184,20 @@ pages.push({
   desc: "Spécialistes des compresseurs d'air et des réseaux de fluides en Normandie et Ille-et-Vilaine. Nos missions, nos valeurs et nos zones d'intervention.",
   canonical: '/qui-sommes-nous', ogImg: '/assets/img/service-conseil.jpg',
   main: `${pageHero('Qui sommes-nous&nbsp;?', 'Qui sommes-nous&nbsp;?',
-    "Spécialistes des compresseurs d'air et des réseaux de fluides, nous intervenons à chaque étape de vos projets.")}
+    "Depuis plus de 10 ans, nous accompagnons les professionnels de l'industrie, de l'artisanat et du tertiaire dans la gestion de leurs systèmes d'air comprimé et de fluides.")}
 
     <section class="section">
       <div class="container">
-        <div class="split">
-          <div class="split__body reveal">
-            <span class="eyebrow">Notre entreprise</span>
-            <h2>L'expertise technique et la proximité</h2>
-            <p>Spécialistes des compresseurs d'air et des réseaux de fluides, nous intervenons à chaque étape de vos projets : vente, location, installation, maintenance, dépannage et service après-vente. Nous mettons notre expertise technique et notre proximité au service de nos clients afin de leur garantir des installations fiables et performantes.</p>
-            <p>Nous sommes également distributeur et partenaire de marques de compresseurs, ainsi que de marques d'autres spécialités.</p>
-          </div>
-          <div class="split__media reveal">
-            <img src="/assets/img/service-conseil.jpg" alt="Bureau d'études et conception technique ACN" loading="lazy" width="1024" height="683">
-          </div>
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Notre expertise</span>
+          <h2>Quatre domaines, une seule exigence</h2>
+          <p class="lead">Une maîtrise complète de l'air comprimé et des fluides industriels, de la conception à la maintenance.</p>
         </div>
-
-        <div class="grid grid--4 mt-lg gallery">
-          <div class="reveal"><img src="/assets/img/service-maintenance.jpg" alt="Maintenance de compresseur par un technicien ACN" loading="lazy"></div>
-          <div class="reveal"><img src="/assets/img/service-traitement-air.jpg" alt="Équipements de traitement de l'air comprimé" loading="lazy"></div>
-          <div class="reveal"><img src="/assets/img/service-optimisation.jpg" alt="Optimisation et mesure de pression d'un réseau" loading="lazy"></div>
-          <div class="reveal"><img src="/assets/img/service-fluides.jpg" alt="Réseau de fluides industriels en inox et aluminium" loading="lazy"></div>
+        <div class="badge-grid">
+          <div class="badge-card reveal"><img src="/assets/img/illus/illus-compresseurs.png" alt="Compresseurs d'air" loading="lazy"></div>
+          <div class="badge-card reveal"><img src="/assets/img/illus/illus-reseaux.png" alt="Réseaux d'air comprimé" loading="lazy"></div>
+          <div class="badge-card reveal"><img src="/assets/img/illus/illus-c.png" alt="Réseaux de fluides industriels" loading="lazy"></div>
+          <div class="badge-card reveal"><img src="/assets/img/illus/illus-d.png" alt="Installation, maintenance et SAV toutes marques" loading="lazy"></div>
         </div>
       </div>
     </section>
@@ -213,6 +206,24 @@ pages.push({
       <div class="container">
         <div class="split">
           <div class="split__body reveal">
+            <div class="section-icon"><img src="/assets/img/icons/cible.png" alt=""></div>
+            <span class="eyebrow">Présentation de l'entreprise</span>
+            <h2>L'expertise technique et la proximité</h2>
+            <p>Spécialistes des compresseurs d'air et des réseaux de fluides, nous intervenons à chaque étape de vos projets : vente, location, installation, maintenance, dépannage et service après-vente.</p>
+            <p>Nous mettons notre expertise technique et notre proximité au service de nos clients afin de leur garantir des installations fiables et performantes. Nous sommes également distributeur et partenaire de marques de compresseurs, ainsi que de marques d'autres spécialités.</p>
+          </div>
+          <div class="split__media reveal">
+            <img src="/assets/img/service-conseil.jpg" alt="Bureau d'études et conception technique ACN" loading="lazy" width="1024" height="683">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="split split--reverse">
+          <div class="split__body reveal">
+            <div class="section-icon"><img src="/assets/img/icons/diamant.png" alt=""></div>
             <span class="eyebrow">Nos missions</span>
             <h2>Ce que nous faisons pour vous</h2>
             <ul class="check-list" style="gap:.8rem">
@@ -224,15 +235,16 @@ pages.push({
             </ul>
           </div>
           <div class="split__media reveal">
-            <img src="/assets/img/hero-services.jpg" alt="Installation et mise en service d'un réseau d'air comprimé" loading="lazy" width="1024" height="683">
+            <img src="/assets/img/service-maintenance.jpg" alt="Technicien ACN assurant la maintenance d'un compresseur" loading="lazy" width="1024" height="683">
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section--soft">
       <div class="container">
         <div class="section-head section-head--center reveal">
+          <div class="section-icon section-icon--lg" style="margin-inline:auto"><img src="/assets/img/icons/personne.png" alt=""></div>
           <span class="eyebrow">Nos valeurs</span>
           <h2>Les engagements qui nous guident</h2>
         </div>
@@ -242,6 +254,22 @@ pages.push({
           <div class="card reveal"><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><h3>Qualité</h3><p>Réaliser des prestations fiables et soignées.</p></div>
           <div class="card reveal"><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg></div><h3>Expertise</h3><p>Mettre nos compétences techniques au service de chaque projet.</p></div>
           <div class="card reveal"><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></div><h3>Confiance</h3><p>Construire des relations durables fondées sur le professionnalisme et le respect de nos engagements.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Pourquoi choisir ACN&nbsp;?</span>
+          <h2>Vos atouts à nos côtés</h2>
+        </div>
+        <div class="trust-strip">
+          <div class="trust-item reveal"><img src="/assets/img/illus/why-1.png" alt="Plus de 10 ans d'expérience" loading="lazy"></div>
+          <div class="trust-item reveal"><img src="/assets/img/illus/why-2.png" alt="Techniciens itinérants" loading="lazy"></div>
+          <div class="trust-item reveal"><img src="/assets/img/illus/why-3.png" alt="Normandie & Est Bretagne" loading="lazy"></div>
+          <div class="trust-item reveal"><img src="/assets/img/illus/why-4.png" alt="Maintenance toutes marques" loading="lazy"></div>
+          <div class="trust-item reveal"><img src="/assets/img/illus/why-5.png" alt="Proximité et réactivité" loading="lazy"></div>
         </div>
       </div>
     </section>
@@ -263,7 +291,7 @@ pages.push({
             </div>
           </div>
           <div class="split__media reveal">
-            <img src="/assets/img/service-maintenance.jpg" alt="Technicien itinérant ACN en intervention sur site" loading="lazy" width="1024" height="683">
+            <img src="/assets/img/service-fluides.jpg" alt="Réseaux d'air comprimé et de fluides couvrant la Normandie" loading="lazy" width="1024" height="683">
           </div>
         </div>
       </div>
