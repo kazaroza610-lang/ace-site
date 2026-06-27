@@ -116,7 +116,7 @@ const footer = `
       </div>
     </div>
   </footer>
-  <script src="/assets/js/main.js" defer></script>`;
+  <script src="/assets/js/main.js?v=20260627a" defer></script>`;
 
 /* ─── Page hero réutilisable ──────────────────────────────── */
 function pageHero(crumb, title, intro) {
@@ -151,7 +151,7 @@ function doc({ slug, active, title, desc, canonical, ogImg, main }) {
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260627a">
 </head>
 <body>
 ${header(active)}

@@ -190,15 +190,10 @@ body.menu-open { overflow: hidden; }
 /* ─── HERO (accueil) ─────────────────────────────────────────── */
 .hero {
   position: relative; color: #fff; overflow: hidden;
-  background: radial-gradient(1100px 560px at 82% -10%, rgba(47,128,237,.38), transparent 60%),
-              linear-gradient(120deg, var(--ink) 0%, var(--navy) 55%, var(--navy-700) 100%);
+  background: linear-gradient(120deg, rgba(14,34,54,.93) 0%, rgba(22,50,77,.85) 55%, rgba(31,111,224,.58) 100%),
+              url('/assets/img/hero-services.jpg') center/cover no-repeat;
 }
-.hero__grid {
-  display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(2rem, 5vw, 4rem);
-  align-items: center; padding-block: clamp(3.5rem, 9vw, 6rem);
-}
-.hero__inner { max-width: 620px; }
-.hero__visual img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow-lg); }
+.hero__inner { padding-block: clamp(2.75rem, 6vw, 4.25rem); max-width: 700px; }
 .hero h1 { color: #fff; margin-bottom: 1.1rem; }
 .hero .eyebrow { color: #8fc0fb; }
 .hero__sub { font-size: 1.3rem; font-family: var(--font-display); font-weight: 500; color: #cfe0f5; margin-bottom: 1.8rem; }
@@ -434,7 +429,7 @@ body.menu-open { overflow: hidden; }
   .nav__cta .btn--outline { display: none; }
   .burger { display: flex; }
 
-  .split, .contact-grid, .hero__grid { grid-template-columns: 1fr; }
+  .split, .contact-grid { grid-template-columns: 1fr; }
   .split--reverse .split__media { order: 0; }
   .hero__inner { max-width: none; }
   .subgrid { grid-template-columns: 1fr; gap: 1.2rem; }
