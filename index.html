@@ -3,484 +3,385 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Air Comprimé Normandie — Expert en air comprimé en Normandie</title>
-  <meta name="description" content="Air Comprimé Normandie : SAV constructeur, maintenance, dépannage, vente, location et installation de compresseurs toutes marques. Intervention dans toute la Normandie.">
+  <title>Air Comprimé Normandie — Compresseurs & réseaux de fluides industriels</title>
+  <meta name="description" content="Air Comprimé Normandie (ACN) : vente, location, installation, maintenance et dépannage de compresseurs toutes marques. Expert air comprimé et réseaux de fluides en Normandie et Ille-et-Vilaine.">
+  <link rel="canonical" href="https://ace-site-one.vercel.app/">
+  <link rel="icon" type="image/png" href="/assets/img/favicon-acn.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Air Comprimé Normandie">
+  <meta property="og:title" content="Air Comprimé Normandie — Expert compresseurs & réseaux de fluides">
+  <meta property="og:description" content="Vente, installation, maintenance et optimisation de compresseurs et réseaux d'air comprimé en Normandie & Bretagne.">
+  <meta property="og:image" content="https://ace-site-one.vercel.app/assets/img/hero-services.jpg">
+  <meta property="og:url" content="https://ace-site-one.vercel.app/">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- LocalBusiness schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Air Comprimé Normandie",
+    "image": "https://ace-site-one.vercel.app/assets/img/logo-acn.png",
+    "url": "https://ace-site-one.vercel.app/",
+    "telephone": "0231823155",
+    "email": "agence@acnormandie.fr",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4 Allée de Cindais, ZAC de la Suisse Normande",
+      "addressLocality": "Saint-André-sur-Orne",
+      "postalCode": "14320",
+      "addressRegion": "Calvados",
+      "addressCountry": "FR"
+    },
+    "areaServed": ["Normandie", "Calvados", "Manche", "Ille-et-Vilaine"],
+    "openingHours": "Mo-Fr 08:00-12:00 13:30-17:00",
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:00", "closes": "12:00"
+    },{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "13:30", "closes": "17:00"
+    }]
+  }
+  </script>
 </head>
 <body>
-  <!-- ══════════ A) HEADER / NAVBAR ══════════ -->
-  <header class="navbar">
-    <div class="container navbar__inner">
-      <a href="index.html" class="navbar__logo" aria-label="Accueil — Air Comprimé Normandie">
-        <span class="brand">
-          <svg class="brand__oval" viewBox="0 0 122 96" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <ellipse cx="61" cy="48" rx="58" ry="43" fill="none" stroke="#60A5FA" stroke-width="5"/>
-            <ellipse cx="61" cy="48" rx="50" ry="36" fill="none" stroke="#3B82F6" stroke-width="2" opacity="0.55"/>
-            <path d="M101 16 A 58 43 0 0 1 101 80" fill="none" stroke="#2563EB" stroke-width="4" stroke-linecap="round"/>
-            <text x="61" y="62" text-anchor="middle" font-family="'Barlow Condensed', sans-serif" font-weight="800" font-size="42" letter-spacing="1.5" fill="#ffffff">ACN</text>
-          </svg>
-          <span class="brand__text">
-            <span class="brand__top">AIR COMPRIMÉ</span>
-            <span class="brand__bot">NORMANDIE</span>
-          </span>
-        </span>
+
+  <!-- ══════════ HEADER ══════════ -->
+  <header class="header">
+    <div class="container nav">
+      <a href="/" class="nav__logo" aria-label="Accueil — Air Comprimé Normandie">
+        <img src="/assets/img/logo-acn.png" alt="Air Comprimé Normandie" width="115" height="46">
       </a>
 
-      <nav class="navbar__nav" aria-label="Navigation principale">
-        <a href="services.html" class="navbar__link">Services</a>
-        <a href="marques.html" class="navbar__link">Marques</a>
-        <a href="occasions.html" class="navbar__link">Occasions</a>
-        <a href="qui-sommes-nous.html" class="navbar__link">À propos</a>
-        <a href="contact.html" class="navbar__link">Contact</a>
+      <nav class="nav__menu" aria-label="Navigation principale">
+        <div class="nav__item is-active"><a href="/" class="nav__link">Accueil</a></div>
+        <div class="nav__item"><a href="/nos-services" class="nav__link">Nos services</a></div>
+        <div class="nav__item">
+          <a href="/nos-partenaires" class="nav__link">Nos partenaires
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="dropdown">
+            <a href="/partenaires-compresseurs">Partenaires compresseurs<small>MAC3, RENNER, ABAC, MULTIAIR</small></a>
+            <a href="/partenaires-autres">Partenaires autres spécialités<small>Huiles & consommables premium</small></a>
+          </div>
+        </div>
+        <div class="nav__item">
+          <a href="/blog" class="nav__link">Blog
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="dropdown">
+            <a href="/blog#expertise">La minute expertise<small>Conseils techniques air comprimé</small></a>
+            <a href="/blog#terrain">Le regard terrain<small>Retours d'expérience</small></a>
+          </div>
+        </div>
+        <div class="nav__item"><a href="/qui-sommes-nous" class="nav__link">Qui sommes-nous&nbsp;?</a></div>
       </nav>
 
-      <div class="navbar__actions">
-        <a href="tel:0231823155" class="navbar__phone" aria-label="Appeler le 02 31 82 31 55">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <div class="nav__cta">
+        <a href="tel:0231823155" class="btn btn--outline" aria-label="Appeler le 02 31 82 31 55">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           02 31 82 31 55
         </a>
-        <a href="contact.html" class="btn btn--primary" aria-label="Demander un devis gratuit">Devis gratuit</a>
+        <a href="/devis" class="btn btn--primary">Devis en ligne</a>
       </div>
 
-      <button class="navbar__burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+      <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- Menu mobile overlay -->
+  <!-- ══════════ MENU MOBILE ══════════ -->
   <div class="mobile-menu" id="mobile-menu">
-    <nav class="mobile-menu__nav" aria-label="Navigation mobile">
-      <a href="services.html" class="mobile-menu__link">Services</a>
-      <a href="marques.html" class="mobile-menu__link">Marques</a>
-      <a href="occasions.html" class="mobile-menu__link">Occasions</a>
-      <a href="qui-sommes-nous.html" class="mobile-menu__link">À propos</a>
-      <a href="contact.html" class="mobile-menu__link">Contact</a>
-    </nav>
-    <div class="mobile-menu__footer">
-      <a href="tel:0231823155" class="mobile-menu__phone" aria-label="Appeler le 02 31 82 31 55">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        02 31 82 31 55
+    <a href="/" class="m-link">Accueil</a>
+    <a href="/nos-services" class="m-link">Nos services</a>
+    <div class="m-accordion">
+      <a href="/nos-partenaires" class="m-link m-accordion__head">Nos partenaires
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
       </a>
-      <a href="contact.html" class="btn btn--primary btn--block">Devis gratuit</a>
-      <a href="mailto:contact@aircomprimenormandie.fr" class="btn btn--outline btn--block">Envoyer un email</a>
+      <div class="m-accordion__body m-sub">
+        <a href="/partenaires-compresseurs">Partenaires compresseurs</a>
+        <a href="/partenaires-autres">Partenaires autres spécialités</a>
+      </div>
     </div>
+    <div class="m-accordion">
+      <a href="/blog" class="m-link m-accordion__head">Blog
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </a>
+      <div class="m-accordion__body m-sub">
+        <a href="/blog#expertise">La minute expertise</a>
+        <a href="/blog#terrain">Le regard terrain</a>
+      </div>
+    </div>
+    <a href="/qui-sommes-nous" class="m-link">Qui sommes-nous&nbsp;?</a>
+    <a href="/devis" class="btn btn--primary btn--block btn--lg">Devis en ligne</a>
+    <a href="tel:0231823155" class="btn btn--outline btn--block">02 31 82 31 55</a>
   </div>
 
   <main>
-
-    <!-- ══════════ B) HERO ══════════ -->
+    <!-- ══════════ HERO ══════════ -->
     <section class="hero">
+      <div class="container hero__inner reveal">
+        <span class="eyebrow">Vente · Installation · Maintenance · Optimisation</span>
+        <h1>Air Comprimé Normandie</h1>
+        <p class="hero__sub">Votre expert en compresseurs d'air et réseaux de fluides industriels, en Normandie et à l'est de la Bretagne.</p>
+        <div class="hero__actions">
+          <a href="/nos-services" class="btn btn--primary btn--lg">Découvrir nos services
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="/devis" class="btn btn--outline-light btn--lg">Demander un devis</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ QUI NOUS SOMMES ══════════ -->
+    <section class="section">
       <div class="container">
-        <div class="hero__grid">
-          <div class="hero__content fade-up">
-            <span class="eyebrow eyebrow--light">Expert en air comprimé · Normandie</span>
-            <h1>Votre expert de l'air comprimé en Normandie</h1>
-            <p class="hero__subtitle">Depuis 22 ans, expert en compresseurs, sécheurs et réseaux d’air comprimé sur toute la Normandie. Distributeur et SAV agréé ABAC / DEVILBISS, Renner Kompressoren et Mac 3.</p>
-            <div class="hero__cta">
-              <a href="tel:0231823155" class="btn btn--primary btn--lg" aria-label="Appeler maintenant le 02 31 82 31 55">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                Appeler maintenant
-              </a>
-              <a href="contact.html" class="btn btn--outline btn--lg" aria-label="Demander un devis">Demander un devis</a>
-            </div>
+        <div class="split">
+          <div class="split__body reveal">
+            <span class="eyebrow">Qui nous sommes</span>
+            <h2>Plus de 10 ans d'expertise au service de l'industrie</h2>
+            <p>Depuis plus de 10 ans, nous accompagnons les professionnels des secteurs industriels, artisanaux et tertiaires dans la gestion complète de leurs systèmes d'air comprimé et de fluides industriels. Notre expertise technique est notre principal point fort, notamment dans les domaines des compresseurs d'air, des réseaux d'air et des réseaux de fluides.</p>
+            <p>Nous vous accompagnons dans la vente, la location, l'installation, le service après-vente, la gestion des systèmes d'air comprimé et de fluides et la maintenance de compresseurs de toutes marques.</p>
+            <p>Nous sommes situés à Saint-André-sur-Orne (14) et nous intervenons sur toute la Normandie ainsi qu'à l'est de la Bretagne, notamment en Ille-et-Vilaine.</p>
+            <a href="/qui-sommes-nous" class="btn btn--outline mt-sm">En savoir plus sur ACN</a>
           </div>
-          <div class="hero__visual fade-up">
-            <img src="assets/images/photos/compresseurs-salle.jpg" alt="Salle de compresseurs d'air industriels" class="media-photo" width="1280" height="960" loading="eager">
+          <div class="split__media reveal">
+            <img src="/assets/img/about-1.jpg" alt="Atelier et équipements Air Comprimé Normandie" loading="lazy" width="1024" height="1024">
           </div>
         </div>
 
-        <!-- Stats -->
-        <div class="hero__stats fade-up">
-          <div class="stat">
-            <div class="stat__value" data-count="22" data-suffix="+">22+</div>
-            <div class="stat__label">ans d'expérience</div>
+        <div class="card mt-lg reveal" style="background:var(--bg-soft);border:none">
+          <p style="margin:0"><strong style="color:var(--navy)">Une intervention rapide, partout.</strong> Nos techniciens sont itinérants et interviennent sans passage systématique par l'agence, grâce à nos points d'ancrage fixes situés à <strong>Grand-Celland (50)</strong>, <strong>Parfouru-sur-Odon (14)</strong>, <strong>Chênedollé (14)</strong> et <strong>Morteaux-Coulibœuf (14)</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ POURQUOI CHOISIR ACN ══════════ -->
+    <section class="section section--soft">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Pourquoi choisir ACN&nbsp;?</span>
+          <h2>Une expertise complète et de proximité</h2>
+        </div>
+        <div class="grid grid--4">
+          <div class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg></div>
+            <h3>Expertise technique</h3>
+            <p>Nous concevons, optimisons et entretenons vos installations d'air comprimé et de fluide pour garantir performance, fiabilité et longévité.</p>
           </div>
-          <div class="stat">
-            <div class="stat__value" data-count="14" data-suffix="+">14+</div>
-            <div class="stat__label">villes couvertes</div>
+          <div class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.91 8.84 8.56 21.18a4.5 4.5 0 0 1-6.36-6.36L14.54 2.5a3 3 0 0 1 4.24 4.24L7.5 18.02"/></svg></div>
+            <h3>Partenaires &amp; consommables premium</h3>
+            <p>Nous travaillons avec les marques professionnelles leaders et utilisons des huiles haut de gamme (Q8Oils, Yacco, Avia) pour protéger vos équipements.</p>
           </div>
-          <div class="stat">
-            <div class="stat__value" data-count="100" data-suffix="%">100%</div>
-            <div class="stat__label">toutes marques</div>
+          <div class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <h3>Réactivité locale</h3>
+            <p>En Normandie et en Bretagne (Ille-et-Vilaine), nos techniciens interviennent rapidement sur site pour limiter les arrêts de production.</p>
           </div>
-          <div class="stat">
-            <div class="stat__value" data-count="24" data-suffix="h">24h</div>
-            <div class="stat__label">intervention rapide</div>
+          <div class="card reveal">
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+            <h3>Solutions complètes &amp; durables</h3>
+            <p>Vente, installation, maintenance et optimisation énergétique : chaque projet est pensé pour réduire vos coûts et améliorer la performance.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ══════════ B2) TICKER DÉFILANT ══════════ -->
-    <div class="ticker" aria-hidden="true">
-      <div class="ticker__track">
-        <span class="ticker__item"><span class="ticker__dot">◆</span> Air Comprimé</span>
-        <span class="ticker__item"><span class="ticker__dot">◆</span> SAV Constructeur</span>
-        <span class="ticker__item"><span class="ticker__dot">◆</span> Maintenance Préventive</span>
-        <span class="ticker__item"><span class="ticker__dot">◆</span> Dépannage 24h</span>
-        <span class="ticker__item"><span class="ticker__dot">◆</span> Toutes Marques</span>
-        <span class="ticker__item"><span class="ticker__dot">◆</span> Réseaux d'Air Comprimé</span>
-        <span class="ticker__item"><span class="ticker__dot">◆</span> Installation</span>
-        <span class="ticker__item"><span class="ticker__dot">◆</span> Location</span>
-        <span class="ticker__item"><span class="ticker__dot">◆</span> Audit Énergétique</span>
-        <span class="ticker__item"><span class="ticker__dot">◆</span> Normandie</span>
-        <!-- Duplication pour boucle sans coupure -->
-        <span class="ticker__item"><span class="ticker__dot">◆</span> Air Comprimé</span>
-        <span class="ticker__item"><span class="ticker__dot">◆</span> SAV Constructeur</span>
-        <span class="ticker__item"><span class="ticker__dot">◆</span> Maintenance Préventive</span>
-        <span class="ticker__item"><span class="ticker__dot">◆</span> Dépannage 24h</span>
-        <span class="ticker__item"><span class="ticker__dot">◆</span> Toutes Marques</span>
-        <span class="ticker__item"><span class="ticker__dot">◆</span> Réseaux d'Air Comprimé</span>
-        <span class="ticker__item"><span class="ticker__dot">◆</span> Installation</span>
-        <span class="ticker__item"><span class="ticker__dot">◆</span> Location</span>
-        <span class="ticker__item"><span class="ticker__dot">◆</span> Audit Énergétique</span>
-        <span class="ticker__item"><span class="ticker__dot">◆</span> Normandie</span>
-      </div>
-    </div>
-
-    <!-- ══════════ C) SERVICES ══════════ -->
-    <section class="section bg-silver" id="services">
+    <!-- ══════════ PRODUIT MSTS / MSTS-V ══════════ -->
+    <section class="section">
       <div class="container">
-        <div class="section-header">
-          <span class="eyebrow">Nos services</span>
-          <h2 class="text-navy">Une expertise complète de l'air comprimé</h2>
-          <p>Du SAV constructeur à l'installation de réseaux, nous accompagnons votre production sur tout le cycle de vie de vos équipements.</p>
-        </div>
-
-        <div class="grid-3 stagger">
-          <!-- 1. SAV Constructeur -->
-          <a href="services.html#sav" class="service-card fade-up" aria-label="SAV Constructeur">
-            <img src="assets/images/services/sav-constructeur.jpg" alt="SAV Constructeur" class="service-card__img" loading="lazy">
-            <div class="service-card__body">
-              <h3>SAV Constructeur</h3>
-              <p>Service après-vente agréé constructeur : pièces d'origine, garanties respectées et interventions par techniciens certifiés.</p>
+        <div class="split reveal">
+          <div class="split__media">
+            <img src="/assets/img/produit-msts-v.webp" alt="Compresseur MAC3 bi-étagé MSTS-V" loading="lazy">
+          </div>
+          <div class="split__body">
+            <span class="eyebrow">MAC3 — Points forts</span>
+            <h2>Compresseurs bi-étagés MSTS / MSTS-V</h2>
+            <div class="subgrid">
+              <div>
+                <h4>Performances</h4>
+                <ul class="check-list">
+                  <li>Jusqu'à 15&nbsp;% d'économie d'énergie vs un mono-étagé</li>
+                  <li>Réduction du niveau sonore</li>
+                  <li>Fonctionne jusqu'à 45&nbsp;°C ambiant</li>
+                  <li>Refroidissement optimal, faible contrepression</li>
+                  <li>Récupération de la chaleur (en option)</li>
+                  <li>Moteur très haut rendement IE4</li>
+                  <li>Réduction des pertes de charge</li>
+                  <li>Ventilateurs pilotés par variateur de fréquence</li>
+                  <li>Séparateur centrifuge &amp; purgeur sans pertes intégrés</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Ergonomie</h4>
+                <ul class="check-list">
+                  <li>Contrôle électronique avec affichage LCD</li>
+                  <li>Conception intérieure facilitant l'entretien</li>
+                </ul>
+                <h4 style="margin-top:1.4rem">Domaines d'application</h4>
+                <div class="tag-row">
+                  <span class="tag">Grandes industries</span>
+                  <span class="tag">Industrie automobile</span>
+                  <span class="tag">Production d'énergie</span>
+                  <span class="tag">Métallurgie</span>
+                </div>
+              </div>
             </div>
-          </a>
-
-          <!-- 2. Maintenance -->
-          <a href="services.html#maintenance" class="service-card fade-up" aria-label="Maintenance et Entretien">
-            <img src="assets/images/services/maintenance-entretien.jpg" alt="Maintenance et Entretien" class="service-card__img" loading="lazy">
-            <div class="service-card__body">
-              <h3>Maintenance &amp; Entretien</h3>
-              <p>Contrats de maintenance préventive pour fiabiliser vos compresseurs et prévenir les arrêts de production coûteux.</p>
-            </div>
-          </a>
-
-          <!-- 3. Réparation -->
-          <a href="services.html#depannage" class="service-card fade-up" aria-label="Réparation et Dépannage">
-            <img src="assets/images/services/reparation-depannage.jpg" alt="Réparation et Dépannage" class="service-card__img" loading="lazy">
-            <div class="service-card__body">
-              <h3>Réparation &amp; Dépannage</h3>
-              <p>Intervention rapide en cas de panne. Diagnostic, réparation et remise en service de votre matériel toutes marques.</p>
-            </div>
-          </a>
-
-          <!-- 4. Vente & Installation -->
-          <a href="services.html#vente" class="service-card fade-up" aria-label="Vente et Installation">
-            <img src="assets/images/services/vente-installation.jpg" alt="Vente et Installation" class="service-card__img" loading="lazy">
-            <div class="service-card__body">
-              <h3>Vente &amp; Installation</h3>
-              <p>Conseil, vente et installation de compresseurs neufs adaptés à vos besoins, avec mise en service sur site.</p>
-            </div>
-          </a>
-
-          <!-- 5. Location -->
-          <a href="services.html#location" class="service-card fade-up" aria-label="Location">
-            <img src="assets/images/services/location.jpg" alt="Location de compresseurs" class="service-card__img" loading="lazy">
-            <div class="service-card__body">
-              <h3>Location</h3>
-              <p>Solutions de location courte ou longue durée pour faire face à un pic d'activité ou à une panne imprévue.</p>
-            </div>
-          </a>
-
-          <!-- 6. Réseaux -->
-          <a href="services.html#reseaux" class="service-card fade-up" aria-label="Réseaux d'air comprimé">
-            <img src="assets/images/services/reseaux-air-comprime.jpg" alt="Réseaux d'air comprimé" class="service-card__img" loading="lazy">
-            <div class="service-card__body">
-              <h3>Réseaux d'air comprimé</h3>
-              <p>Conception et installation de réseaux de distribution : tuyauterie, traitement de l'air, séchage et filtration.</p>
-            </div>
-          </a>
-
-          <!-- 7. Optimisation -->
-          <a href="services.html#optimisation" class="service-card fade-up" aria-label="Optimisation et Analyse">
-            <img src="assets/images/services/optimisation-analyse.jpg" alt="Optimisation et Analyse" class="service-card__img" loading="lazy">
-            <div class="service-card__body">
-              <h3>Optimisation &amp; Analyse</h3>
-              <p>Audit énergétique de votre installation pour réduire votre consommation et optimiser vos coûts d'exploitation.</p>
-            </div>
-          </a>
+            <a href="https://www.mac3.fr/produit/bi-etage-vitesse-variable-90-a-315-kw/" target="_blank" rel="noopener" class="btn btn--primary mt-md">En savoir plus sur le MSTS / MSTS-V
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ══════════ Bloc image + texte (réassurance visuelle) ══════════ -->
-    <section class="section bg-white">
+    <!-- ══════════ PRODUIT MSH MACFARMER ══════════ -->
+    <section class="section section--soft">
       <div class="container">
-        <div class="feature-split">
-          <div class="feature-split__media fade-up">
-            <img src="assets/images/photos/technicien-maintenance.jpg" alt="Technicien réalisant la maintenance d'un compresseur" class="media-photo" width="1280" height="853" loading="lazy">
+        <div class="split split--reverse reveal">
+          <div class="split__media split__media--plain">
+            <img src="/assets/img/produit-msh-macfarmer.png" alt="Compresseur MAC3 MSH Macfarmer pour travaux agricoles" loading="lazy">
           </div>
-          <div class="feature-split__content fade-up">
-            <span class="eyebrow">Pourquoi nous choisir</span>
-            <h2>Un partenaire technique de confiance, au plus près de vous</h2>
-            <p>Depuis plus de 22 ans, Air Comprimé Normandie intervient sur tout type de compresseurs et d'équipements pneumatiques, quelle que soit la marque. Notre proximité régionale garantit des délais d'intervention courts et un suivi personnalisé.</p>
-            <ul>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Techniciens certifiés et pièces d'origine constructeur
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Intervention sur site dans toute la Normandie
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Contrats de maintenance sur mesure
-              </li>
+          <div class="split__body">
+            <span class="eyebrow">MAC3 — Le compresseur MSH Macfarmer</span>
+            <h2>Compresseur d'air à entraînement hydraulique pour travaux agricoles</h2>
+            <p>Développé par des ingénieurs spécialisés et en collaboration avec des professionnels de l'agriculture (agriculteurs, distributeurs d'équipements…), le MSH Macfarmer est le premier compresseur de chantier adapté aux chantiers agricoles. La puissance d'un compresseur de chantier, sans moteur thermique, à raccorder au circuit hydraulique des tracteurs.</p>
+            <h4>Pour fonctionner, le compresseur :</h4>
+            <ul class="check-list" style="margin-bottom:1.2rem">
+              <li>Se positionne sur le relevage du tracteur</li>
+              <li>Se raccorde au circuit hydraulique du tracteur</li>
+              <li>Se branche sur une prise électrique du tracteur</li>
             </ul>
-            <div class="mt-lg">
-              <a href="qui-sommes-nous.html" class="btn btn--outline-dark">Découvrir l'entreprise</a>
+            <p>Il peut fournir jusqu'à <strong style="color:var(--navy)">2&nbsp;500&nbsp;L/min d'air comprimé à 7&nbsp;bar</strong>. En configuration standard, il est livré avec un châssis intégrant les passages de fourche pour chariots élévateurs.</p>
+            <h4>Options disponibles</h4>
+            <div class="tag-row">
+              <span class="tag">Enrouleur de tuyau (20 m)</span>
+              <span class="tag">Support filet / ficelle de presse</span>
+              <span class="tag">2 coffres de 20 L</span>
+              <span class="tag">Support film d'enrubannage</span>
+              <span class="tag">Calibration automatique</span>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════ D) RÉASSURANCE ══════════ -->
-    <section class="section trust">
-      <div class="container">
-        <div class="section-header section-header--center">
-          <span class="eyebrow eyebrow--white">Nos engagements</span>
-          <h2>Des garanties concrètes pour votre activité</h2>
-          <p>Nous mettons tout en œuvre pour assurer la continuité et la performance de votre production.</p>
-        </div>
-
-        <div class="grid-3 stagger">
-          <div class="trust-card fade-up">
-            <div class="trust-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            <h4 style="margin-top:1.2rem">Utilisations</h4>
+            <div class="tag-row">
+              <span class="tag">Gonflage</span><span class="tag">Outils de protection</span>
+              <span class="tag">Pneumatique</span><span class="tag">Purgeage de tuyaux</span>
+              <span class="tag">Nettoyage à sec</span><span class="tag">Transport d'outillage</span>
             </div>
-            <div>
-              <h4>Intervention rapide</h4>
-              <p>Dépannage sous 24h pour limiter vos arrêts de production.</p>
-            </div>
-          </div>
-
-          <div class="trust-card fade-up">
-            <div class="trust-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-            </div>
-            <div>
-              <h4>22+ ans d'expérience</h4>
-              <p>Une expertise reconnue sur tous types de compresseurs.</p>
-            </div>
-          </div>
-
-          <div class="trust-card fade-up">
-            <div class="trust-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12l2 2 4-4"/><path d="M21 12c-1 0-3-1-3-3s2-3 3-3-1-3-3-3-3 2-3 3-1 3-3 3-3-2-3-3 .5-3 0-3"/><circle cx="12" cy="12" r="10"/></svg>
-            </div>
-            <div>
-              <h4>Toutes marques</h4>
-              <p>Nous intervenons sur l'ensemble des marques du marché.</p>
-            </div>
-          </div>
-
-          <div class="trust-card fade-up">
-            <div class="trust-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <div>
-              <h4>Techniciens qualifiés</h4>
-              <p>Une équipe formée et certifiée par les constructeurs.</p>
-            </div>
-          </div>
-
-          <div class="trust-card fade-up">
-            <div class="trust-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div>
-              <h4>Entreprise locale</h4>
-              <p>Implantée en Normandie, réactive et proche de ses clients.</p>
-            </div>
-          </div>
-
-          <div class="trust-card fade-up">
-            <div class="trust-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            </div>
-            <div>
-              <h4>Normandie complète</h4>
-              <p>Une couverture sur l'ensemble du territoire normand.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════ E) ZONES D'INTERVENTION ══════════ -->
-    <section class="section bg-white" id="zones">
-      <div class="container">
-        <div class="feature-split">
-          <div class="feature-split__content fade-up">
-            <span class="eyebrow">Zones d'intervention</span>
-            <h2>Nous intervenons dans toute la Normandie</h2>
-            <p>De Cherbourg à Évreux, en passant par Caen, Rouen et Le Havre, nos techniciens se déplacent sur tout le territoire normand.</p>
-            <div class="zones__pills">
-              <span class="zone-pill">Caen</span>
-              <span class="zone-pill">Rouen</span>
-              <span class="zone-pill">Le Havre</span>
-              <span class="zone-pill">Cherbourg</span>
-              <span class="zone-pill">Alençon</span>
-              <span class="zone-pill">Évreux</span>
-              <span class="zone-pill">Lisieux</span>
-              <span class="zone-pill">Saint-Lô</span>
-              <span class="zone-pill">Flers</span>
-              <span class="zone-pill">Argentan</span>
-              <span class="zone-pill">Falaise</span>
-              <span class="zone-pill">Avranches</span>
-              <span class="zone-pill">Coutances</span>
-              <span class="zone-pill">Honfleur</span>
-            </div>
-          </div>
-          <div class="feature-split__media fade-up">
-            <img src="assets/images/normandie-map.svg" alt="Carte de la Normandie avec les villes couvertes" width="480" height="380">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════ F) CTA CONTACT ══════════ -->
-    <section class="section cta-band" id="contact-cta">
-      <div class="container">
-        <div class="fade-up">
-          <h2>Besoin d'un expert en air comprimé ?</h2>
-          <p class="cta-band__sub">Devis gratuit · Réponse sous 24h · Intervention rapide</p>
-          <div class="cta-band__buttons">
-            <a href="tel:0231823155" class="btn btn--white btn--lg" aria-label="Appeler le 02 31 82 31 55">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              02 31 82 31 55
-            </a>
-            <a href="mailto:contact@aircomprimenormandie.fr" class="btn btn--outline btn--lg" aria-label="Envoyer un email">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              Envoyer un email
+            <a href="https://www.mac3.fr/categorie-produit/categorie-msh-macfarmer/" target="_blank" rel="noopener" class="btn btn--primary mt-md">En savoir plus sur le Macfarmer
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ══════════ CTA FINALE ══════════ -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>Un projet ou une intervention&nbsp;?</h2>
+          <p>Nos équipes vous accompagnent dans l'installation, la maintenance et l'optimisation de vos réseaux industriels.</p>
+          <a href="/devis" class="btn btn--light btn--lg">Contactez-nous pour obtenir un devis</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ CONTACT / CARTE ══════════ -->
+    <section class="section section--soft" id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Nous trouver</span>
+          <h2>Contact &amp; agence</h2>
+        </div>
+        <div class="contact-grid">
+          <div class="info-list reveal">
+            <div class="info-item">
+              <div class="info-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <div><h4>Adresse</h4><p>ZAC de la Suisse Normande<br>4 Allée de Cindais, 14320 Saint-André-sur-Orne, Calvados</p></div>
+            </div>
+            <div class="info-item">
+              <div class="info-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <div><h4>Horaires</h4><p>Du lundi au vendredi<br>8h00 – 12h00 / 13h30 – 17h00</p></div>
+            </div>
+            <div class="info-item">
+              <div class="info-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+              <div><h4>Téléphone</h4><p><a href="tel:0231823155">02 31 82 31 55</a></p></div>
+            </div>
+            <div class="info-item">
+              <div class="info-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div><h4>Email</h4><p><a href="mailto:agence@acnormandie.fr">agence@acnormandie.fr</a></p></div>
+            </div>
+            <a href="/devis" class="btn btn--primary mt-sm">Demander un devis</a>
+          </div>
+          <div class="map-embed reveal">
+            <iframe
+              src="https://www.google.com/maps?q=4+All%C3%A9e+de+Cindais,+14320+Saint-Andr%C3%A9-sur-Orne&output=embed"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Localisation Air Comprimé Normandie — Saint-André-sur-Orne"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- ══════════ G) ECO BANNER ══════════ -->
-  <div class="eco-banner">
-    <div class="container eco-banner__inner">
-      <div class="eco-banner__logo" aria-hidden="true">
-        <svg viewBox="0 0 220 90" xmlns="http://www.w3.org/2000/svg" width="220" height="90">
-          <!-- Arbre gauche -->
-          <g fill="#6B8F3E">
-            <ellipse cx="28" cy="28" rx="10" ry="13"/>
-            <ellipse cx="20" cy="22" rx="8"  ry="10"/>
-            <ellipse cx="36" cy="18" rx="9"  ry="12"/>
-            <rect x="26" y="40" width="4" height="14" rx="2"/>
-            <!-- feuilles -->
-            <circle cx="15" cy="15" r="4"/><circle cx="22" cy="9" r="5"/><circle cx="30" cy="7" r="5"/>
-            <circle cx="38" cy="11" r="5"/><circle cx="42" cy="20" r="4"/>
-          </g>
-          <!-- Arbre droit -->
-          <g fill="#6B8F3E">
-            <ellipse cx="192" cy="28" rx="10" ry="13"/>
-            <ellipse cx="184" cy="22" rx="8"  ry="10"/>
-            <ellipse cx="200" cy="18" rx="9"  ry="12"/>
-            <rect x="190" y="40" width="4" height="14" rx="2"/>
-            <circle cx="179" cy="15" r="4"/><circle cx="186" cy="9" r="5"/><circle cx="194" cy="7" r="5"/>
-            <circle cx="202" cy="11" r="5"/><circle cx="206" cy="20" r="4"/>
-          </g>
-          <!-- Texte NORMANDIE -->
-          <text x="110" y="44" text-anchor="middle" font-family="Georgia,serif" font-size="15"
-                font-weight="700" fill="#5A7A30" letter-spacing="3">NORMANDIE</text>
-          <!-- Texte FORÊVER -->
-          <text x="110" y="70" text-anchor="middle" font-family="Georgia,serif" font-size="26"
-                font-weight="900" fill="#5A7A30" letter-spacing="1">FORÊVER</text>
-        </svg>
-      </div>
-      <p class="eco-banner__text">
-        Air Comprimé Normandie est engagé dans une démarche éco-responsable pour le reboisement des forêts Normandes.
-      </p>
-    </div>
-  </div>
-
-  <!-- ══════════ G) FOOTER ══════════ -->
+  <!-- ══════════ FOOTER ══════════ -->
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
-        <div class="footer__brand">
-          <span class="brand">
-          <svg class="brand__oval" viewBox="0 0 122 96" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <ellipse cx="61" cy="48" rx="58" ry="43" fill="none" stroke="#60A5FA" stroke-width="5"/>
-            <ellipse cx="61" cy="48" rx="50" ry="36" fill="none" stroke="#3B82F6" stroke-width="2" opacity="0.55"/>
-            <path d="M101 16 A 58 43 0 0 1 101 80" fill="none" stroke="#2563EB" stroke-width="4" stroke-linecap="round"/>
-            <text x="61" y="62" text-anchor="middle" font-family="'Barlow Condensed', sans-serif" font-weight="800" font-size="42" letter-spacing="1.5" fill="#ffffff">ACN</text>
-          </svg>
-          <span class="brand__text">
-            <span class="brand__top">AIR COMPRIMÉ</span>
-            <span class="brand__bot">NORMANDIE</span>
-          </span>
-        </span>
-          <p>Votre expert de l'air comprimé en Normandie : SAV constructeur, maintenance, dépannage, vente, location et réseaux d'air comprimé, toutes marques.</p>
-          <div class="footer__address">
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>ZAC de la Suisse Normande, Allée de Cindais · 14320 Saint-André-sur-Orne</span>
-            <a href="tel:0231823155"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>02 31 82 31 55</a>
-            <a href="mailto:contact@aircomprimenormandie.fr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>contact@aircomprimenormandie.fr</a>
+        <div>
+          <span class="footer__logo"><img src="/assets/img/logo-acn.png" alt="Air Comprimé Normandie"></span>
+          <p>Expert en compresseurs d'air et réseaux de fluides industriels. Vente, installation, maintenance et optimisation en Normandie &amp; Ille-et-Vilaine.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <div class="footer__links">
+            <a href="/">Accueil</a>
+            <a href="/nos-services">Nos services</a>
+            <a href="/nos-partenaires">Nos partenaires</a>
+            <a href="/blog">Blog</a>
+            <a href="/qui-sommes-nous">Qui sommes-nous&nbsp;?</a>
+            <a href="/devis">Devis en ligne</a>
           </div>
         </div>
-
-        <div class="footer__col">
-          <h5>Services</h5>
-          <nav class="footer__links" aria-label="Liens services">
-            <a href="services.html#sav">SAV Constructeur</a>
-            <a href="services.html#maintenance">Maintenance &amp; Entretien</a>
-            <a href="services.html#depannage">Réparation &amp; Dépannage</a>
-            <a href="services.html#vente">Vente &amp; Installation</a>
-            <a href="services.html#location">Location</a>
-            <a href="services.html#reseaux">Réseaux d'air comprimé</a>
-            <a href="services.html#optimisation">Optimisation &amp; Analyse</a>
-          </nav>
+        <div>
+          <h4>Partenaires</h4>
+          <div class="footer__links">
+            <a href="/partenaires-compresseurs">Compresseurs</a>
+            <a href="/partenaires-autres">Autres spécialités</a>
+            <a href="https://www.mac3.fr/" target="_blank" rel="noopener">MAC3</a>
+            <a href="https://www.renner-kompressoren.de/fr/produits/" target="_blank" rel="noopener">RENNER</a>
+            <a href="https://www.abacaircompressors.com/fr-fr" target="_blank" rel="noopener">ABAC</a>
+          </div>
         </div>
-
-        <div class="footer__col">
-          <h5>Navigation</h5>
-          <nav class="footer__links" aria-label="Liens de navigation">
-            <a href="marques.html">Marques partenaires</a>
-            <a href="occasions.html">Occasions &amp; Déstockage</a>
-            <a href="qui-sommes-nous.html">Qui sommes-nous</a>
-            <a href="contact.html">Contact &amp; Devis</a>
-          </nav>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer__contact">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>ZAC de la Suisse Normande, 4 Allée de Cindais, 14320 Saint-André-sur-Orne</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:0231823155">02 31 82 31 55</a></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:agence@acnormandie.fr">agence@acnormandie.fr</a></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Lun – Ven : 8h-12h / 13h30-17h</span></li>
+          </ul>
         </div>
       </div>
-
       <div class="footer__bottom">
         <span>© <span data-year>2026</span> Air Comprimé Normandie — Tous droits réservés.</span>
-        <span>Intervention dans toute la Normandie</span>
+        <span><a href="/mentions-legales">Mentions légales</a> · <a href="/nos-partenaires">Partenaires</a></span>
       </div>
     </div>
   </footer>
 
-  <!-- ══════════ H) BARRE MOBILE FIXE ══════════ -->
-  <div class="mobile-bar">
-    <a href="tel:0231823155" class="btn btn--outline" aria-label="Appeler le 02 31 82 31 55">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      Appeler
-    </a>
-    <a href="contact.html" class="btn btn--primary" aria-label="Demander un devis gratuit">Devis gratuit</a>
-  </div>
-
-  <script src="assets/js/main.js"></script>
+  <script src="/assets/js/main.js" defer></script>
 </body>
 </html>

@@ -1,202 +1,120 @@
 /* ============================================================
    AIR COMPRIMÉ NORMANDIE — main.js
-   Menu mobile · Navbar scroll · Animations IntersectionObserver
-   Vanilla JS — zéro dépendance externe
+   Navbar scroll · Menu mobile · Accordéon · Reveal · Compteurs · Form
+   Vanilla JS — zéro dépendance
    ============================================================ */
-
 (function () {
   'use strict';
 
-  /* ─── 1. MENU MOBILE (hamburger + overlay) ───────────────── */
-  var burger     = document.querySelector('.navbar__burger');
-  var mobileMenu = document.querySelector('.mobile-menu');
-  var body       = document.body;
-
-  function closeMenu() {
-    if (!burger || !mobileMenu) return;
-    burger.classList.remove('is-open');
-    mobileMenu.classList.remove('is-open');
-    burger.setAttribute('aria-expanded', 'false');
-    body.classList.remove('menu-open');
-  }
-
-  function toggleMenu() {
-    if (!burger || !mobileMenu) return;
-    var isOpen = mobileMenu.classList.toggle('is-open');
-    burger.classList.toggle('is-open', isOpen);
-    burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    body.classList.toggle('menu-open', isOpen);
-  }
-
-  if (burger && mobileMenu) {
-    burger.addEventListener('click', toggleMenu);
-
-    // Fermer en cliquant sur un lien du menu
-    mobileMenu.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', closeMenu);
-    });
-
-    // Fermer avec la touche Échap
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && mobileMenu.classList.contains('is-open')) {
-        closeMenu();
-      }
-    });
-  }
-
-  /* ─── 2. NAVBAR — ombre au scroll ────────────────────────── */
-  var navbar = document.querySelector('.navbar');
-  if (navbar) {
-    var onScroll = function () {
-      navbar.classList.toggle('is-scrolled', window.scrollY > 20);
-    };
+  /* ─── 1. Header : ombre au scroll ─────────────────────────── */
+  var header = document.querySelector('.header');
+  if (header) {
+    var onScroll = function () { header.classList.toggle('is-scrolled', window.scrollY > 12); };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
   }
 
-  /* ─── 3. ANIMATIONS AU SCROLL (IntersectionObserver) ─────── */
-  var animated = document.querySelectorAll('.fade-up');
+  /* ─── 2. Menu mobile ──────────────────────────────────────── */
+  var burger = document.querySelector('.burger');
+  var menu   = document.querySelector('.mobile-menu');
+  var body   = document.body;
 
-  if ('IntersectionObserver' in window && animated.length) {
-    var observer = new IntersectionObserver(function (entries, obs) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          obs.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.12,
-      rootMargin: '0px 0px -40px 0px'
+  function closeMenu() {
+    if (!burger || !menu) return;
+    burger.classList.remove('is-open');
+    menu.classList.remove('is-open');
+    burger.setAttribute('aria-expanded', 'false');
+    body.classList.remove('menu-open');
+  }
+  if (burger && menu) {
+    burger.addEventListener('click', function () {
+      var open = menu.classList.toggle('is-open');
+      burger.classList.toggle('is-open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      body.classList.toggle('menu-open', open);
     });
-
-    animated.forEach(function (el) { observer.observe(el); });
-  } else {
-    // Fallback : si pas de support, tout rendre visible
-    animated.forEach(function (el) { el.classList.add('is-visible'); });
+    menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeMenu); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && menu.classList.contains('is-open')) closeMenu();
+    });
   }
 
-  /* ─── 4. COMPTEURS ANIMÉS (au scroll) ────────────────────── */
+  /* ─── 3. Accordéons (sous-menus mobile) ───────────────────── */
+  document.querySelectorAll('.m-accordion__head').forEach(function (head) {
+    head.addEventListener('click', function (e) {
+      e.preventDefault();
+      head.closest('.m-accordion').classList.toggle('is-open');
+    });
+  });
+
+  /* ─── 4. Reveal au scroll ─────────────────────────────────── */
+  var reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && reveals.length) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('is-visible'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  /* ─── 5. Compteurs animés ─────────────────────────────────── */
   var counters = document.querySelectorAll('[data-count]');
-
-  function animateCounter(el) {
-    var target   = parseFloat(el.getAttribute('data-count'));
-    var suffix   = el.getAttribute('data-suffix') || '';
-    var duration = 1900;
-    var start    = null;
-
-    function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
-
-    function step(ts) {
-      if (start === null) start = ts;
-      var progress = Math.min((ts - start) / duration, 1);
-      var value = Math.round(easeOutCubic(progress) * target);
-      el.textContent = value + suffix;
-      if (progress < 1) {
-        requestAnimationFrame(step);
-      } else {
-        el.textContent = target + suffix;
-      }
-    }
-    requestAnimationFrame(step);
-  }
-
   if ('IntersectionObserver' in window && counters.length) {
-    var counterObserver = new IntersectionObserver(function (entries, obs) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          animateCounter(entry.target);
-          obs.unobserve(entry.target);
+    var cio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var el = en.target, target = parseInt(el.getAttribute('data-count'), 10);
+        var suffix = el.getAttribute('data-suffix') || '', start = 0, dur = 1400, t0 = null;
+        function step(ts) {
+          if (!t0) t0 = ts;
+          var p = Math.min((ts - t0) / dur, 1);
+          el.textContent = Math.floor(p * (target - start) + start) + suffix;
+          if (p < 1) requestAnimationFrame(step);
         }
+        requestAnimationFrame(step);
+        cio.unobserve(el);
       });
-    }, { threshold: 0.4 });
-
-    counters.forEach(function (el) {
-      el.textContent = '0' + (el.getAttribute('data-suffix') || '');
-      counterObserver.observe(el);
-    });
-  } else {
-    counters.forEach(function (el) {
-      el.textContent = el.getAttribute('data-count') + (el.getAttribute('data-suffix') || '');
-    });
+    }, { threshold: 0.5 });
+    counters.forEach(function (el) { cio.observe(el); });
   }
 
-  /* ─── 5. ANNÉE DYNAMIQUE (footer) ────────────────────────── */
-  var yearEl = document.querySelector('[data-year]');
-  if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
-
-  /* ─── 6. FORMULAIRE CONTACT (Formspree + fetch) ──────────── */
-  var form = document.getElementById('contact-form');
+  /* ─── 6. Formulaire devis (validation + envoi) ────────────── */
+  var form = document.querySelector('#devis-form');
   if (form) {
-    var status = document.getElementById('form-status');
-    var submitBtn = form.querySelector('button[type="submit"]');
-
-    var setStatus = function (msg, type) {
-      if (!status) return;
-      status.textContent = msg;
-      status.className = 'form__status' + (type ? ' form__status--' + type : '');
-    };
-
-    var get = function (name) {
-      var el = form.elements[name];
-      return el ? el.value.trim() : '';
-    };
-
-    // Repli mailto si l'endpoint Formspree n'est pas encore configuré
-    var mailtoFallback = function () {
-      var subject = '[Site ACN] ' + (get('sujet') || 'Demande de devis')
-        + (get('nom') ? ' — ' + get('nom') : '');
-      var lines = [
-        'Nom : ' + get('nom'),
-        'Entreprise : ' + (get('entreprise') || '—'),
-        'Email : ' + get('email'),
-        'Téléphone : ' + (get('telephone') || '—'),
-        'Sujet : ' + (get('sujet') || 'Demande de devis'),
-        '', 'Message :', get('message')
-      ];
-      window.location.href = 'mailto:contact@aircomprimenormandie.fr'
-        + '?subject=' + encodeURIComponent(subject)
-        + '&body=' + encodeURIComponent(lines.join('\n'));
-    };
-
+    var status = form.querySelector('.form-status');
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      var btn = form.querySelector('button[type="submit"]');
       var action = form.getAttribute('action') || '';
-      if (action.indexOf('VOTRE_ID_FORMSPREE') !== -1 || action.indexOf('formspree.io') === -1) {
-        // Endpoint non configuré → on bascule sur l'email
-        setStatus('Ouverture de votre messagerie…', '');
-        mailtoFallback();
-        return;
+      var data = new FormData(form);
+
+      function show(ok, msg) {
+        if (!status) return;
+        status.className = 'form-status ' + (ok ? 'is-ok' : 'is-err');
+        status.textContent = msg;
       }
 
-      if (submitBtn) { submitBtn.disabled = true; }
-      setStatus('Envoi en cours…', '');
-
-      fetch(action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      }).then(function (response) {
-        if (response.ok) {
-          form.reset();
-          setStatus('Merci ! Votre demande a bien été envoyée. Nous vous répondons sous 24h.', 'success');
-        } else {
-          response.json().then(function (data) {
-            var msg = (data && data.errors && data.errors.length)
-              ? data.errors.map(function (er) { return er.message; }).join(', ')
-              : 'Une erreur est survenue. Réessayez ou appelez-nous au 02 31 82 31 55.';
-            setStatus(msg, 'error');
-          }).catch(function () {
-            setStatus('Une erreur est survenue. Réessayez ou appelez-nous au 02 31 82 31 55.', 'error');
-          });
-        }
-      }).catch(function () {
-        setStatus('Connexion impossible. Réessayez ou appelez-nous au 02 31 82 31 55.', 'error');
-      }).then(function () {
-        if (submitBtn) { submitBtn.disabled = false; }
-      });
+      // Si un endpoint (Formspree) est configuré, on envoie en AJAX. Sinon, démo.
+      if (action && action.indexOf('VOTRE_ID') === -1 && /^https?:/.test(action)) {
+        if (btn) { btn.disabled = true; btn.dataset.label = btn.textContent; btn.textContent = 'Envoi…'; }
+        fetch(action, { method: 'POST', body: data, headers: { Accept: 'application/json' } })
+          .then(function (r) {
+            if (r.ok) { form.reset(); show(true, 'Merci ! Votre demande a bien été envoyée. Nous vous recontactons rapidement.'); }
+            else { show(false, 'Une erreur est survenue. Contactez-nous au 02 31 82 31 55.'); }
+          })
+          .catch(function () { show(false, 'Erreur réseau. Réessayez ou appelez le 02 31 82 31 55.'); })
+          .finally(function () { if (btn) { btn.disabled = false; btn.textContent = btn.dataset.label; } });
+      } else {
+        form.reset();
+        show(true, 'Merci ! Votre demande a bien été enregistrée. (Démo — configurez l’endpoint d’envoi pour la mise en production.)');
+      }
     });
   }
 
+  /* ─── 7. Année dynamique footer ───────────────────────────── */
+  document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();
