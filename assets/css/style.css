@@ -190,10 +190,15 @@ body.menu-open { overflow: hidden; }
 /* ─── HERO (accueil) ─────────────────────────────────────────── */
 .hero {
   position: relative; color: #fff; overflow: hidden;
-  background: linear-gradient(120deg, rgba(14,34,54,.92) 0%, rgba(22,50,77,.82) 55%, rgba(31,111,224,.55) 100%),
-              url('/assets/img/hero-services.jpg') center/cover no-repeat;
+  background: radial-gradient(1100px 560px at 82% -10%, rgba(47,128,237,.38), transparent 60%),
+              linear-gradient(120deg, var(--ink) 0%, var(--navy) 55%, var(--navy-700) 100%);
 }
-.hero__inner { padding-block: clamp(4.5rem, 12vw, 8.5rem); max-width: 720px; }
+.hero__grid {
+  display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(2rem, 5vw, 4rem);
+  align-items: center; padding-block: clamp(3.5rem, 9vw, 6rem);
+}
+.hero__inner { max-width: 620px; }
+.hero__visual img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow-lg); }
 .hero h1 { color: #fff; margin-bottom: 1.1rem; }
 .hero .eyebrow { color: #8fc0fb; }
 .hero__sub { font-size: 1.3rem; font-family: var(--font-display); font-weight: 500; color: #cfe0f5; margin-bottom: 1.8rem; }
@@ -225,6 +230,14 @@ body.menu-open { overflow: hidden; }
 .card__icon svg { width: 26px; height: 26px; }
 .card h3 { margin-bottom: .5rem; }
 .card p { font-size: .98rem; }
+
+/* Carte avec image d'illustration */
+.card--media { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+.card--media .card__media { aspect-ratio: 16/10; overflow: hidden; }
+.card--media .card__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+.card--media:hover .card__media img { transform: scale(1.06); }
+.card--media .card__inner { padding: 1.4rem 1.5rem 1.6rem; }
+.card--media h3 { margin-bottom: .5rem; }
 
 /* Carte service (avec image) */
 .service-card {
@@ -273,11 +286,11 @@ body.menu-open { overflow: hidden; }
 /* ─── PARTENAIRES (logos) ────────────────────────────────────── */
 .logo-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.2rem; }
 .logo-card {
-  background: #fff; border: 1px solid var(--border); border-radius: var(--radius);
+  background: transparent; border: none; border-radius: var(--radius);
   display: flex; flex-direction: column; align-items: center; gap: 1rem;
-  padding: 2rem 1.5rem; transition: var(--transition); text-align: center;
+  padding: 1.5rem; transition: var(--transition); text-align: center;
 }
-.logo-card:hover { box-shadow: var(--shadow); transform: translateY(-4px); }
+.logo-card:hover { transform: translateY(-4px); }
 .logo-card__media { height: 90px; display: grid; place-items: center; width: 100%; }
 .logo-card__media img { max-height: 80px; max-width: 160px; width: auto; object-fit: contain; }
 .logo-card h3 { font-size: 1.1rem; }
@@ -285,8 +298,8 @@ body.menu-open { overflow: hidden; }
 .logo-card .btn { margin-top: .4rem; min-height: 42px; padding: .5rem 1.2rem; font-size: .9rem; }
 
 .logo-strip { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2.5rem; }
-.logo-strip img { max-height: 56px; max-width: 130px; width: auto; object-fit: contain; filter: grayscale(1); opacity: .7; transition: var(--transition); }
-.logo-strip img:hover { filter: grayscale(0); opacity: 1; }
+.logo-strip img { max-height: 56px; max-width: 130px; width: auto; object-fit: contain; transition: var(--transition); }
+.logo-strip img:hover { transform: scale(1.06); }
 
 /* ─── BLOG ───────────────────────────────────────────────────── */
 .blog-card {
@@ -393,8 +406,9 @@ body.menu-open { overflow: hidden; }
   .nav__cta .btn--outline { display: none; }
   .burger { display: flex; }
 
-  .split, .contact-grid { grid-template-columns: 1fr; }
+  .split, .contact-grid, .hero__grid { grid-template-columns: 1fr; }
   .split--reverse .split__media { order: 0; }
+  .hero__inner { max-width: none; }
   .subgrid { grid-template-columns: 1fr; gap: 1.2rem; }
 }
 
