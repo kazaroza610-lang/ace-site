@@ -33,7 +33,9 @@
       burger.setAttribute('aria-expanded', open ? 'true' : 'false');
       body.classList.toggle('menu-open', open);
     });
-    menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeMenu); });
+    /* Ferme le menu au clic sur un lien, SAUF les têtes d'accordéon (elles ne font
+       qu'ouvrir/fermer leur sous-menu, géré au point 3 ci-dessous). */
+    menu.querySelectorAll('a:not(.m-accordion__head)').forEach(function (a) { a.addEventListener('click', closeMenu); });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && menu.classList.contains('is-open')) closeMenu();
     });
@@ -46,6 +48,28 @@
       head.closest('.m-accordion').classList.toggle('is-open');
     });
   });
+
+  /* ─── 3b. Dropdowns desktop — support tactile (tablette) ───── */
+  var isTouch = matchMedia('(hover: none)').matches;
+  if (isTouch) {
+    document.querySelectorAll('.nav__item').forEach(function (item) {
+      var dropdown = item.querySelector('.dropdown');
+      if (!dropdown) return;
+      var link = item.querySelector('.nav__link');
+      link.addEventListener('click', function (e) {
+        if (!item.classList.contains('is-open')) {
+          e.preventDefault();
+          document.querySelectorAll('.nav__item.is-open').forEach(function (i) { if (i !== item) i.classList.remove('is-open'); });
+          item.classList.add('is-open');
+        }
+      });
+    });
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.nav__item')) {
+        document.querySelectorAll('.nav__item.is-open').forEach(function (i) { i.classList.remove('is-open'); });
+      }
+    });
+  }
 
   /* ─── 4. Reveal au scroll ─────────────────────────────────── */
   var reveals = document.querySelectorAll('.reveal');
@@ -117,4 +141,35 @@
 
   /* ─── 7. Année dynamique footer ───────────────────────────── */
   document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
+
+  /* ─── 7b. Préchargement à l'intention (survol/contact tactile) ──
+     Précharge la page cible dès que l'utilisateur montre l'intention d'y aller,
+     pour une navigation perçue comme instantanée — sans rien télécharger
+     pour les pages jamais survolées (économie de données mobiles). */
+  var prefetched = {};
+  function prefetchLink(href) {
+    if (prefetched[href]) return;
+    prefetched[href] = true;
+    var link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = href;
+    document.head.appendChild(link);
+  }
+  document.querySelectorAll('a[href^="/"]').forEach(function (a) {
+    var href = a.getAttribute('href').split('#')[0];
+    if (!href || href === window.location.pathname) return;
+    a.addEventListener('mouseenter', function () { prefetchLink(href); }, { passive: true });
+    a.addEventListener('touchstart', function () { prefetchLink(href); }, { passive: true });
+  });
+
+  /* ─── 8. Défilement fiable vers une ancre (#expertise, #terrain…) ─
+     behavior:'instant' (et non 'smooth'/'auto') : un saut immédiat ne dépend pas
+     de requestAnimationFrame, donc ne peut pas rester bloqué si les animations
+     sont retardées (onglet en arrière-plan, prefers-reduced-motion, mobile lent). */
+  if (window.location.hash) {
+    var target = document.getElementById(window.location.hash.slice(1));
+    if (target) {
+      setTimeout(function () { target.scrollIntoView({ behavior: 'instant', block: 'start' }); }, 0);
+    }
+  }
 })();

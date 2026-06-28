@@ -4,8 +4,6 @@
    Vanilla CSS — zéro dépendance build
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
-
 /* ─── DESIGN TOKENS ──────────────────────────────────────────── */
 :root {
   /* Couleurs — palette ACN bleu industriel */
@@ -54,6 +52,9 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+/* Compense le header sticky lors d'un défilement vers une ancre (#expertise, #terrain…) */
+section[id] { scroll-margin-top: calc(var(--nav-h) + 16px); }
 
 body {
   font-family: var(--font-body);
@@ -151,7 +152,9 @@ p  { color: var(--text-muted); }
   transform: translateY(8px); transition: var(--transition);
 }
 .nav__item:hover .dropdown,
-.nav__item:focus-within .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+.nav__item:focus-within .dropdown,
+.nav__item.is-open .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+.nav__item.is-open .chev { transform: rotate(180deg); }
 .dropdown a {
   display: block; padding: .6rem .8rem; border-radius: 8px; font-size: .95rem;
   font-weight: 500; color: var(--text); transition: var(--transition);
